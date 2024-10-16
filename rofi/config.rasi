@@ -1,0 +1,25 @@
+@theme "theme"
+configuration {
+	modes: [ drun ];
+}
+
+window {
+  transparency: "real";
+}
+
+entry {
+  placeholder: "Search";
+}
+
+element {
+  children: [element-text];
+}
+
+inputbar {
+  enabled: false;
+}
+
+listview {
+  lines: 1;
+  require-input: true;
+}

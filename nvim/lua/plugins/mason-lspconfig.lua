@@ -14,6 +14,7 @@ return {
 				"emmet_language_server",
 				"eslint",
         'clangd',
+        "vuels",
 			}
 		})
 	end

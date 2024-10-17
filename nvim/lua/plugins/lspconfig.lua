@@ -42,6 +42,9 @@ return {
     lspconfig.clangd.setup({
       capabilities = capabilities
     })
+    lspconfig.vuels.setup({
+      capabilities = capabilities
+    })
 
 	end
 

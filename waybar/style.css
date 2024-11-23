@@ -197,6 +197,9 @@ button:hover {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     color: @love;
+    padding: 0 6px;
+    margin: 10px 0;
+    border-radius: 10px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);

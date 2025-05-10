@@ -34,7 +34,10 @@ return {
 			capabilities = capabilities
 		})
 		lspconfig.emmet_language_server.setup({
-			capabilities = capabilities
+			capabilities = capabilities,
+
+      filetypes = { "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "typescriptreact", "htmlangular", "php" }
+
 		})
 		lspconfig.eslint.setup({
 			capabilities = capabilities
@@ -43,6 +46,9 @@ return {
       capabilities = capabilities
     })
     lspconfig.vuels.setup({
+      capabilities = capabilities
+    })
+    lspconfig.intelephense.setup({
       capabilities = capabilities
     })
 

@@ -15,6 +15,7 @@ return {
 				"eslint",
         'clangd',
         "vuels",
+        "intelephense"
 			}
 		})
 	end

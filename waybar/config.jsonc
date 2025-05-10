@@ -14,7 +14,6 @@
     "modules-center": [
     ],
     "modules-right": [
-        "pulseaudio",
         "bluetooth",
         "network",
         "memory",
@@ -41,7 +40,8 @@
 	   "tooltip-format": "{:%b %d}"
     },
     "memory": {
-        "format": "󰍛 {}%"
+        "format": "󰍛 {}%",
+        "on-click": "kitty btop"
     },
     "battery": {
         "states": {
@@ -107,6 +107,7 @@
       "format-disabled": "",
       "format-on": "",
       "format-connected": "󰂱 {device_alias}",
-      "tooltip-format-connected": "Battery: {device_battery_percentage}%"
+      "tooltip-format-connected": "Battery: {device_battery_percentage}%",
+      "on-click": "blueman-manager"
     } 
 }

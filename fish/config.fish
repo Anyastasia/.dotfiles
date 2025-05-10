@@ -12,3 +12,6 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# composer
+fish_add_path /usr/local/bin/composer.phar

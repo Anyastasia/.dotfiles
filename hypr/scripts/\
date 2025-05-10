@@ -1,0 +1,44 @@
+#!/bin/bash
+
+echo "Hello world"
+
+increase_volume () {
+  wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+}
+
+decrease_volume () {
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+}
+
+toggle_mute () {
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+}
+
+get_volume () {
+  check_mute
+  VOLUME=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+  x=$(echo ${VOLUME:8})
+  rounded=$(echo $x*100 | bc)
+  echo ${rounded%.*}
+}
+
+check_mute() {
+  CURR_VOLUME=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+  if [[ echo $CURR_VOLUME | grep "MUTED" ]]; then
+    echo "muted"
+  else
+    echo $CURR_VOLUME
+  fi
+}
+
+if [ "$1" = "--increase" ]; then
+  increase_volume
+elif [ "$1" = "--decrease" ]; then
+  decrease_volume
+elif [ "$1" == "--toggle-mute" ]; then
+  toggle_mute
+elif [ "$1" == "--get-volume" ]; then
+  get_volume
+else
+  echo "Invalid argument"
+fi

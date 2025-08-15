@@ -7,16 +7,18 @@ return {
 				"lua_ls",
 				"html",
 				"cssls",
-				"ts_ls",
+				"vtsls",
 				"vimls",
 				"bashls",
 				"jsonls",
 				"emmet_language_server",
 				"eslint",
         'clangd',
-        "vuels",
-        "intelephense"
-			}
+        "vue_ls",
+        "intelephense",
+			},
+
+      automatic_installation = true
 		})
 	end
 }

@@ -14,9 +14,9 @@
 
 	foreground: @fgd;
 	background: @bg;
-	active-background: @grn;
+	active-background: @fgd;
   urgent-foreground: @fgd;
-	urgent-background: @red;
+	urgent-background: @yel;
 
 	selected-background: @active-background;
 	selected-urgent-background: @urgent-background;
@@ -38,13 +38,13 @@
 	padding: 5;
 }
 #message {
-	/*border:       1px dash 0px 0px ;*/
-	border-color: @separatorcolor;
-	padding:      1px ;
-  background-color: @background;
+  padding: 8;
+  background-color: @background; 
 }
+
 #textbox {
-	text-color: @foreground;
+	text-color: @grn;
+  background-color: @background;
 }
 #listview {
   background-color: @background;
@@ -84,15 +84,16 @@
 	text-color:       @foreground;
 }
 #element.selected.normal {
-  background-color: @background;
-	text-color:       @foreground;
+  background-color: @selected-active-background;
+	text-color:       @background;
+  border-radius: 10px;
 }
 #element.selected.urgent {
 	background-color: @selected-urgent-background;
 	text-color:       @foreground;
 }
 #element.selected.active {
-	/*background-color: @selected-active-background;*/
+	background-color: @selected-active-background;
 	text-color:       @background;
 }
 #element.alternate.normal {

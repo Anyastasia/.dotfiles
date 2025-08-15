@@ -18,7 +18,8 @@
         "network",
         "memory",
         "battery",
-        "clock"
+        "clock",
+        "custom/notification"
     ],
     "hyprland/workspaces": {
       "format": "{icon}",
@@ -77,11 +78,11 @@
        // "format-wifi": "{essid} ({signalStrength}%) ",
        "format-wifi": "󰤨",
        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "󰤭",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click" : "nm-connection-editor"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -109,5 +110,25 @@
       "format-connected": "󰂱 {device_alias}",
       "tooltip-format-connected": "Battery: {device_battery_percentage}%",
       "on-click": "blueman-manager"
-    } 
+    },
+    "custom/notification": {
+      "tooltip": "{}",
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "󱅫",
+        "none": "󰂚",
+        "dnd-notification": "󰂛",
+        "dnd-none": "󰂛",
+        "inhibited-notification": "󱅫",
+        "inhibited-none": "󰂚",
+       "dnd-inhibited-notification": "󰂛",
+        "dnd-inhibited-none": "󰂛"
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+    }
 }

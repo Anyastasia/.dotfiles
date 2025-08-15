@@ -125,7 +125,8 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#workspaces {
+#workspaces,
+#custom-notification {
    /* background-color: @base;*/
     color: white;
    /* border-radius: 10px;
@@ -169,8 +170,8 @@ button:hover {
     border-radius: 10px;
     padding: 4px;
     margin-top: 8px;
-    margin-bottom: 8px;*/
-    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px; */
 }
 
 /*#clock {
@@ -190,7 +191,7 @@ button:hover {
 @keyframes blink {
     to {
         background-color: #ffffff;
-        color: #000000;
+        color: @love;
     }
 }
 
@@ -247,11 +248,6 @@ label:focus {
 #backlight {
     background-color: #90b1b1;
 }*/
-
-#network {
-    padding-left: 4px;
-    padding-right: 4px;
-}
 
 
 #bluetooth.connected {
@@ -401,4 +397,9 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#custom-notification {
+  font-family: "Symbols Nerd Font";
+  margin-right: 8px;
 }

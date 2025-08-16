@@ -1,5 +1,6 @@
 # Current set up
 
+<img src="/screenshots/2025-08-17-053639_hyprshot.png">
 <img src="/screenshots/2024-10-16-233245_hyprshot.png">
 <img src="/screenshots/2024-10-16-233257_hyprshot.png">
 <img src="/screenshots/2024-10-16-233427_hyprshot.png">
